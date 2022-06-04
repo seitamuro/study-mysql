@@ -41,6 +41,11 @@ mysql> SELECT p.uniform_num, p.position, p.name, p.height FROM players p WHERE p
 
 mysql> SELECT c.group_name, max(c.ranking), min(c.ranking) FROM countries c GROUP BY c.group_name HAVING max(c.ranking) - min(c.ranking) > 50;
 
+## 問題70
+
+mysql> select "1980",  count(birth) from players where birth between "1980-01-01" and "1980-12-31" union select "1981" , count(birth) from players where birth between "1981-01-01" and "1981-12-31";
+
+
 # つまづいたこと
 
 ## "Access denied for user 'root'@'localhost' (using password: YES)"
