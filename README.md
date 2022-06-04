@@ -37,6 +37,10 @@ mysql> SELECT p2.position, max(p2.height) as height, (SELECT p1.name FROM player
 
 mysql> SELECT p.uniform_num, p.position, p.name, p.height FROM players p WHERE p.height < (SELECT avg(p2.height) FROM players p2) limit 10;
 
+## 問題69
+
+mysql> SELECT c.group_name, max(c.ranking), min(c.ranking) FROM countries c GROUP BY c.group_name HAVING max(c.ranking) - min(c.ranking) > 50;
+
 # つまづいたこと
 
 ## "Access denied for user 'root'@'localhost' (using password: YES)"
