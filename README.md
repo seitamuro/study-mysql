@@ -23,6 +23,11 @@ mysql> select g.id, g.goal_time, (SELECT p.name FROM players p WHERE p.id = g.pl
 ## 問題65
 
 mysql> select g.id, g.goal_time, p.name FROM goals g LEFT JOIN players p ON g.player_id = p.id limit 13;
+
+## 課題66
+
+mysql> select p.position, p.height, p2.name, p2.club from (select position, max(height) as height from players GROUP BY position) p left join players p2 on p2.height = p.height AND p2.position = p.position;
+
 # つまづいたこと
 
 ## "Access denied for user 'root'@'localhost' (using password: YES)"
