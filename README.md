@@ -16,6 +16,9 @@ mysql> select c.name, g.goal_time, p.position, p.name from goals g left join pla
 
 mysql> select p.kickoff, c1.name as my_country, c2.name as enemy_country from pairings p left join countries c1 on c1.id = p.my_country_id left join countries c2 on c2.id = p.enemy_country_id limit 5;
 
+## 問題64
+mysql> select g.id, g.goal_time, (SELECT p.name FROM players p WHERE p.id = g.player_id) FROM goals g WHERE g.player_id IS NOT NULL limit 5;
+
 # つまづいたこと
 
 ## "Access denied for user 'root'@'localhost' (using password: YES)"
