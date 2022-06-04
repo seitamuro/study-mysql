@@ -11,7 +11,7 @@ dockerコマンドでイメージから直接コンテナを作ると初期化�
 docker-composeを使うと初期化がうまくいくっぽい｡
 要検証｡
 
-参考
+- 参考
 
 https://github.com/seitamuro/docker-compose-mysql
 
