@@ -45,6 +45,10 @@ mysql> SELECT c.group_name, max(c.ranking), min(c.ranking) FROM countries c GROU
 
 mysql> select "1980",  count(birth) from players where birth between "1980-01-01" and "1980-12-31" union select "1981" , count(birth) from players where birth between "1981-01-01" and "1981-12-31";
 
+## 問題71
+
+mysql> SELECT id, position, name, height, weight FROM players WHERE height > 195 UNION ALL SELECT id, position, name, height, weight FROM players WHERE weight > 95 ORDER BY id;
+
 
 # つまづいたこと
 
